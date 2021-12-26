@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@200;300;400;500;600&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Volkhov:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+header {
+  background: url(/img/bg-home.jpg);
+  height: 100vh;
+  background-attachment: fixed;
+}
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0px 40px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+.logo img {
+  max-width: 200px;
+}
+nav li {
+  list-style: none;
+  display: inline-block;
+}
+nav li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+/* toggle items */
+#toggle-menu{
+    display: none;
+}
+.toggle-menu-btn{
+    color: #fff;
+    font-size: 20px;
+    display: none;
+}
+
+@media(max-width:940px){
+    .toggle-menu-btn{
+        display:block;
+    }
+    .navigation{
+        position: absolute;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 0;
+        transform:translateY(-500px);
+        transition: .3s linear;
+        background: rgba(0, 0, 0, 0.739);
+    }
+    #toggle-menu:checked ~ .navigation{
+        transform:translateY(0px);
+    }
+    .navigation li {
+        display:block;
+        padding: 20px 0px 20px 50px;
+    }
+}
